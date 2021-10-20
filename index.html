@@ -80,7 +80,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="offcanvas w-75 offcanvas-start" tabindex="-1" id="menu" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="menu" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <img class="img-fluid w-50" src="https://educacion.rionegro.gov.ar/images/logo_educacion.png" alt=""> 
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -335,7 +335,6 @@
             $('.slidernoti').slick({
                 dots: false,
                 arrows: false,
-                pauseOnFocus: false,
                 autoplay: true,
                 infinite: true,
                 speed: 1000,
@@ -344,9 +343,11 @@
             });
 
             $('.sliderped').slick({
-                dots: true,
+                dots: false,
                 arrows:false,
                 autoplay: false,
+                
+                waitForAnimate: false,
                 infinite: true,
                 speed: 1000,
                 centerMode: true,
