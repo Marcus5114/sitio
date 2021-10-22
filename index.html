@@ -33,6 +33,15 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/vaakash/jquery-easy-ticker@3.2.1/dist/jquery.easy-ticker.min.js"></script>
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
     <style>
         body.modal-open > :not(.modal){
             -webkit-filter: blur(1px);
@@ -47,9 +56,11 @@
             border-radius: .5rem;
             padding: 1rem;
 
-            -webkit-box-shadow: -3px 3px 4px 0px rgb(197, 197, 197);
+            -webkit-box-shadow: -3px 3px 4px 0px rgb(197, 197, 197, 1);
             -moz-box-shadow: -3px 3px 4px 0px rgb(197, 197, 197,1);
             box-shadow: -3px 3px 4px 0px rgb(197, 197, 197,1);
+
+            background-color: white;
         }
 
         .slider-caption {
@@ -62,7 +73,7 @@
     </style>
 
 </head>
-<body class="bg-light">
+<body style="background-color: #f2f2f2;">
 
     <div class="container-fluid p-3" style="background-color: #4d5f62;">
     </div>
@@ -71,7 +82,7 @@
     </div>
 
     <!--NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
 
         <div class="container-fluid">
 
@@ -134,7 +145,7 @@
         <div class="tarjeta-flotante">
             <div>
 
-                <h5 class="text-center fw-bold" style="color: #4d5f62;">Noticias</h5>
+                <h6 class="text-center fw-bold" style="color: #4d5f62;">Noticias</h6>
 
             </div>
 
@@ -184,7 +195,7 @@
 
             <div>
 
-                <h5 class="text-center fw-bold" style="color: #4d5f62;">Novedades</h5>
+                <h6 class="text-center fw-bold" style="color: #4d5f62;">Novedades</h6>
 
             </div>
 
@@ -214,17 +225,13 @@
             </div>
         </div>
     </div>
-    
-
-    <!--<br><br><br><br><br><br>-->
-
 
     <!--PEDAGOGICOS 1--->
     <div class="container-fluid my-4">
 
         <div class="tarjeta-flotante">
             <div class="text-center" style="color: #4d5f62;">
-                <h5><b>Accesos Pedagógicos</b></h5>
+                <h6><b>Accesos Pedagógicos</b></h6>
             </div>
 
             <div class="sliderped">
@@ -247,25 +254,43 @@
     <!--INSTITUCIONALES-->
     <div class="container-fluid my-4">
 
-        <div class="tarjeta-flotante">
-            <div class="text-center" style="color: #4d5f62;">
-                <h5><b>Accesos Institucionales</b></h5>
+        
+        <div class="text-center" style="color: #4d5f62;">
+            <h6><b>Accesos Institucionales</b></h6>
+        </div>
+
+        <div class="d-flex">
+
+            <div>
+                <img src="./botones/intranet.png" alt="" class="img-fluid">
             </div>
 
-            <div class="text-center">
-                <button class="btn btn-outline-success border rounded-circle"><i class="far fa-building"></i></button>
-                <button class="btn btn-outline-success border rounded-circle"><i class="fas fa-school"></i></button>
-                <button class="btn btn-outline-success border rounded-circle"><i class="far fa-id-card"></i></button>
-                <button class="btn btn-outline-success border rounded-circle"><i class="fas fa-bullhorn"></i></button>
-                <button data-bs-toggle="offcanvas" data-bs-target="#insti" class="btn btn-outline-success border rounded-circle"><i class="fas fa-plus"></i></button>
+            <div>
+                <img src="./botones/extranet.png" alt="" class="img-fluid">
             </div>
+
+            <div>
+                <img src="./botones/tramites_y_consultas.png" alt="" class="img-fluid">
+            </div>
+
+            <div>
+                <img src="./botones/comunicarnos.png" alt="" class="img-fluid">
+            </div>
+
+            <div>
+                <img src="./botones/ver_mas.png" alt="" class="img-fluid">
+            </div>
+            
+
+
         </div>
+    
 
     </div>
 
     <div class="offcanvas offcanvas-bottom" style="height: 75%;" tabindex="-1" id="insti" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Accesos Institucionales</h5>
+          <h6 class="offcanvas-title" id="offcanvasExampleLabel">Accesos Institucionales</h6>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -298,6 +323,29 @@
 
         </div>
     </div>
+
+
+    <div class="container-fluid my-4">
+
+        <div class="tarjeta-flotante">
+
+            <div class="text-center" style="color: #4d5f62;">
+                <h6><b>Contacto</b></h6>
+            </div>
+
+            <div>
+
+                <div id="mapa" style="height:12rem">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
 
 
     <script>
@@ -336,6 +384,17 @@
                 
 
             }).data('easyTicker');
+
+            var mapa = L.map('mapa').setView([-40.81093514595663, -62.99156844447873],13);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: 'your.mapbox.access.token'
+            }).addTo(mymap);
         });
       </script>
 </body>
