@@ -51,7 +51,12 @@
         }
 
         .celeste{
-            color: #5bcefa;
+            color: #50b4d8;
+        }
+
+        .fondo-verde{
+            background-color: rgba(166, 217, 169, 0.5);
+            border-radius: 200px;
         }
 
         .marron{
@@ -65,7 +70,6 @@
 
         .boton {
             color: #77655B;
-            font-family: 'Itim', cursive;
             transition: 0.25s ease;
         }
 
@@ -94,7 +98,7 @@
     <div class="container-fluid p-3" style="height: 100vh;">
 
 
-        <div class="container w-75" style="background-color: rgba(245, 169, 184, 0.3); border-radius: 200px;">
+        <div class="container w-75" style="background-color: rgba(255, 218, 209, 0.5); border-radius: 200px;">
             
             <div class="d-flex justify-content-center p-3">
 
@@ -122,13 +126,13 @@
 
         <br>
 
-        <div class="container w-75 p-3" style="background-color: rgba(238, 209, 104, 0.5); border-radius: 200px;">
+        <div class="container w-75 p-3 fondo-verde">
 
             <div class="row row-cols-3">
 
                 <div id="goto1" class="col text-center boton" role="button" onclick="toggleDiv('sobremi')">
 
-                    <div class="">
+                    <div class="itim">
                         <i class="fas fa-user fs-1"></i>
                         <h5 class="">Sobre Mí</h5>
                     </div>
@@ -137,7 +141,7 @@
 
                 <div id="goto2" class="col text-center boton" role="button" onclick="toggleDiv('profesion')">
 
-                    <div>
+                    <div class="itim">
                         <i class="fas fa-hand-holding-medical fs-1 "></i>
                         <h5 class="">Mi Profesión</h5>
                     </div>
@@ -146,7 +150,7 @@
 
                 <div id="goto3" class="col text-center boton" role="button" onclick="toggleDiv('contacto')">
 
-                    <div>
+                    <div class="itim">
                         <i class="fas fa-envelope-open-text fs-1 "></i>
                         <h5 class="">Contacto</h5>
                     </div>
@@ -165,7 +169,7 @@
 
 
 
-        <div id="sobremi" class="container w-75 p-5 my-1 toggle" style="background-color: rgba(238, 209, 104, 0.5); border-radius: 200px;">
+        <div id="sobremi" class="container w-75 p-5 my-1 toggle fondo-verde">
 
             <div class="text-center">
                 <h3 class="itim marron">Sobre Mí</h3>
@@ -187,7 +191,7 @@
 
         </div>
 
-        <div id="profesion" class="container w-75 p-5 my-1 toggle" style="background-color: rgba(238, 209, 104, 0.5); border-radius: 200px;">
+        <div id="profesion" class="container w-75 p-5 my-1 toggle fondo-verde" >
 
             <div class="text-center">
                 <h3 class="itim marron">Mi Profesión</h3>
@@ -209,7 +213,7 @@
 
         </div>
 
-        <div id="contacto" class="container w-75 p-5 my-1 toggle" style="background-color: rgba(238, 209, 104, 0.5); border-radius: 200px;">
+        <div id="contacto" class="container w-75 p-5 my-1 toggle fondo-verde">
 
             <div class="text-center">
                 <h3 class="itim marron">Contacto</h3>
