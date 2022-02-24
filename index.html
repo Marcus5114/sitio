@@ -19,7 +19,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"> 
         
 
-    <script src="https://kit.fontawesome.com/b458f559f0.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/dcab6efb5d.js" crossorigin="anonymous"></script>
 
     <style>
         @font-face {
@@ -27,7 +27,7 @@
             src: url(./Imágenes/Wishper.ttf);
         }
 
-        p{
+        p, small{
             color: #77655B;
             font-family: 'Itim', cursive;
         }
@@ -56,6 +56,11 @@
 
         .fondo-verde{
             background-color: rgba(166, 217, 169, 0.5);
+            border-radius: 200px;
+        }
+
+        .fondo-rosa{
+            background-color: rgba(255, 218, 209, 0.5);
             border-radius: 200px;
         }
 
@@ -98,7 +103,7 @@
     <div class="container-fluid p-3" style="height: 100vh;">
 
 
-        <div class="container w-75" style="background-color: rgba(255, 218, 209, 0.5); border-radius: 200px;">
+        <div class="container w-75 fondo-rosa">
             
             <div class="d-flex justify-content-center p-3">
 
@@ -128,7 +133,7 @@
 
         <div class="container w-75 p-3 fondo-verde">
 
-            <div class="row row-cols-3">
+            <div class="row row-cols-4">
 
                 <div id="goto1" class="col text-center boton" role="button" onclick="toggleDiv('sobremi')">
 
@@ -148,6 +153,15 @@
 
                 </div>
 
+                <div id="goto4" class="col text-center boton" role="button" onclick="toggleDiv('blog')">
+
+                    <div class="itim">
+                        <i class="fas fa-newspaper fs-1"></i>
+                        <h5 class="">Blog</h5>
+                    </div>
+
+                </div>
+
                 <div id="goto3" class="col text-center boton" role="button" onclick="toggleDiv('contacto')">
 
                     <div class="itim">
@@ -156,6 +170,8 @@
                     </div>
 
                 </div>
+
+                
 
             </div>
 
@@ -166,8 +182,6 @@
    
 
     <div class="container-fluid" id="contenido">
-
-
 
         <div id="sobremi" class="container w-75 p-5 my-1 toggle fondo-verde">
 
@@ -209,6 +223,33 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam inventore voluptates ut asperiores ullam quia. Cumque modi aliquid quidem, similique nam officia esse recusandae laborum, enim nisi incidunt, at ullam!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum ipsam at magnam impedit quaerat debitis eveniet, non aliquid error, distinctio vero ut perspiciatis tempore placeat numquam fuga recusandae adipisci.</p>
                 
+            </div>
+
+        </div>
+
+        <div id="blog" class="container w-75 p-5 my-1 toggle fondo-verde">
+
+            <div class="text-center">
+                <h3 class="itim marron">Blog</h3>
+
+
+                <p>Noticias y Novedades</p>
+
+                <div class="d-flex align-items-center fondo-rosa">
+
+                    <div style="min-width: 300px; max-width: 300px;">
+                        <img src="https://picsum.photos/500" alt="" class="img-fluid" style="border-radius: 100px;">
+                    </div>
+
+                    <div class="text-start p-3">
+                        <h4>Este es el Título de la noticia</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rem porro repellendus debitis eligendi deserunt quaerat explicabo, magnam aliquid commodi suscipit ratione quibusdam accusamus possimus esse, asperiores consectetur earum ad?</p>
+                        <small>31/02/2022</small>
+                    </div>
+                </div>
+                
+
+               
             </div>
 
         </div>
@@ -264,6 +305,7 @@
             $('#sobremi').hide();
             $('#profesion').hide();
             $('#contacto').hide();
+            $('#blog').hide();
 
         });
 
@@ -278,21 +320,27 @@
     <script type="text/javascript">
         
         $("#goto1").click(function() {
-            $([document.documentElement, document.body]).animate({
+            $('html, body').animate({
             scrollTop: $("#sobremi").offset().top
-            }, 1000);
+            }, 500, "swing");
         });
 
         $("#goto2").click(function() {
             $([document.documentElement, document.body]).animate({
             scrollTop: $("#profesion").offset().top
-            }, 1000);
+            }, 500);
         });
 
         $("#goto3").click(function() {
             $([document.documentElement, document.body]).animate({
             scrollTop: $("#contacto").offset().top
-            }, 1000);
+            }, 500);
+        });
+
+        $("#goto4").click(function() {
+            $([document.documentElement, document.body]).animate({
+            scrollTop: $("#blog").offset().top
+            }, 500);
         });
     </script>
 
