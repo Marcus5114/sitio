@@ -56,7 +56,7 @@
 
         .fondo-verde{
             background-color: rgba(166, 217, 169, 0.5);
-            border-radius: 200px;
+            border-radius: 8rem;
         }
 
         .fondo-rosa{
@@ -75,12 +75,12 @@
 
         .boton {
             color: #77655B;
-            transition: 0.25s ease;
+            transition: 0.35s ease;
         }
 
-        .boton :hover{
+        .boton:hover{
             color: #DC5849;
-            transition: 0.25s ease;
+            transition: 0.35s ease;
         }
 
         .btn-redes{
@@ -99,7 +99,6 @@
     </style>
 </head>
 <body>
-    
     <div class="container-fluid p-3" style="height: 100vh;">
 
 
@@ -108,7 +107,7 @@
             <div class="d-flex justify-content-center p-3">
       
                 <div class="p-2">
-                    <img src="../assets/images/anahi.jpg" alt="" class="img-fluid" style="border-radius: 2rem;">
+                    <img src="./Imágenes/anahi.jpg" alt="" class="img-fluid" style="border-radius: 2rem;">
                 </div>
       
                 <div class="p-2">
@@ -136,12 +135,14 @@
           <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
               
               <li class="nav-item" role="presentation">
-                <button class="btn boton" id="pill1" data-bs-toggle="pill" data-bs-target="#sobremi" type="button" role="tab" aria-controls="sobremi" aria-selected="true">
-                  <div class="itim">
-                      <i class="fas fa-user fs-1"></i>
-                      <h5 class="">Sobre Mí</h5>
-                  </div>
-                </button>
+                    <button class="btn boton" id="pill1" data-bs-toggle="pill" data-bs-target="#sobremi" type="button" role="tab" aria-controls="sobremi" aria-selected="true">
+                        <div class="itim">
+                            <i class="fas fa-user fs-1"></i>
+                            <h5 class="">Sobre Mí</h5>
+                        </div>
+                    </button>
+                
+
               </li>
       
       
@@ -287,70 +288,12 @@
               </div>
           </div>
       
-        <!--
-      
-      
-        
-      
-        <div id="contacto" class="container w-75 p-5 my-1 toggle fondo-verde">
-      
-           
-      
-        </div>-->
-      
+
       </div>
       
       
       
         
       
-      
-      
-      <!--<script>
-      
-        $(document).ready(function(){
-      
-            $('#sobremi').hide();
-            $('#profesion').hide();
-            $('#contacto').hide();
-            $('#blog').hide();
-      
-        });
-      
-        function toggleDiv(divId) {
-            $("#"+divId).toggle();
-            $('.toggle').not($("#"+divId)).hide();
-        }
-      </script>-->
-      
-      <!--SCROLLS-->
-      <!--###################################################-->
-      <script type="text/javascript">
-        
-        $("#goto1").click(function() {
-            $('html, body').animate({
-            scrollTop: $("#sobremi").offset().top
-            }, 500);
-        });
-      
-        $("#goto2").click(function() {
-            $([document.documentElement, document.body]).animate({
-            scrollTop: $("#profesion").offset().top
-            }, 500);
-        });
-      
-        $("#goto3").click(function() {
-            $([document.documentElement, document.body]).animate({
-            scrollTop: $("#contacto").offset().top
-            }, 500);
-        });
-      
-        $("#goto4").click(function() {
-            $([document.documentElement, document.body]).animate({
-            scrollTop: $("#blog").offset().top
-            }, 500);
-        });
-      </script>
-
 </body>
 </html>
