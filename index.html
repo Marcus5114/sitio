@@ -106,13 +106,13 @@
         <div class="container w-75 fondo-rosa">
             
             <div class="d-flex justify-content-center p-3">
-
+      
                 <div class="p-2">
-                    <img src="./Imágenes/anahi.jpg" alt="" class="img-fluid" style="border-radius: 20px;">
+                    <img src="../assets/images/anahi.jpg" alt="" class="img-fluid" style="border-radius: 2rem;">
                 </div>
-
+      
                 <div class="p-2">
-
+      
                     <h1 class="wishper nombre display-2"> Dra. Anahí <br> Mondillo</h1>
                     <h2 class="wishper celeste">Endocrinóloga</h2>
                     <h5 class="itim marron">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
@@ -121,228 +121,236 @@
                         <a href="https://www.youtube.com/channel/UCw7WzcLuKaNJLxWGJppKbXg?app=desktop" target="_blank" class="btn btn-redes"><i class="fab fa-youtube"></i></a>
                         <a href="https://www.tiktok.com/@dra.mondillo" target="_blank" class="btn btn-redes"><i class="fab fa-tiktok"></i></a>
                     </div>
-
-
+      
+      
                 </div>
-
+      
             </div>
-
+      
         </div>
-
+      
         <br>
-
+      
         <div class="container w-75 p-3 fondo-verde">
-
-            <div class="row row-cols-4">
-
-                <div id="goto1" class="col text-center boton" role="button" onclick="toggleDiv('sobremi')">
-
-                    <div class="itim">
-                        <i class="fas fa-user fs-1"></i>
-                        <h5 class="">Sobre Mí</h5>
-                    </div>
-
-                </div>
-
-                <div id="goto2" class="col text-center boton" role="button" onclick="toggleDiv('profesion')">
-
-                    <div class="itim">
-                        <i class="fas fa-hand-holding-medical fs-1 "></i>
-                        <h5 class="">Mi Profesión</h5>
-                    </div>
-
-                </div>
-
-                <div id="goto4" class="col text-center boton" role="button" onclick="toggleDiv('blog')">
-
-                    <div class="itim">
-                        <i class="fas fa-newspaper fs-1"></i>
-                        <h5 class="">Blog</h5>
-                    </div>
-
-                </div>
-
-                <div id="goto3" class="col text-center boton" role="button" onclick="toggleDiv('contacto')">
-
-                    <div class="itim">
-                        <i class="fas fa-envelope-open-text fs-1 "></i>
-                        <h5 class="">Contacto</h5>
-                    </div>
-
-                </div>
-
+      
+          <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+              
+              <li class="nav-item" role="presentation">
+                <button class="btn boton" id="pill1" data-bs-toggle="pill" data-bs-target="#sobremi" type="button" role="tab" aria-controls="sobremi" aria-selected="true">
+                  <div class="itim">
+                      <i class="fas fa-user fs-1"></i>
+                      <h5 class="">Sobre Mí</h5>
+                  </div>
+                </button>
+              </li>
+      
+      
+              <li class="nav-item" role="presentation">
+                  <button class="btn boton" id="pill2" data-bs-toggle="pill" data-bs-target="#profesion" type="button" role="tab" aria-controls="profesion" aria-selected="true">
+                      <div class="itim">
+                          <i class="fas fa-hand-holding-medical fs-1 "></i>
+                          <h5 class="">Mi Profesión</h5>
+                      </div>
+                  </button>
+              </li>
+      
+              <li class="nav-item" role="presentation">
+                  <button class="btn boton" id="pill2" data-bs-toggle="pill" data-bs-target="#blog" type="button" role="tab" aria-controls="blog" aria-selected="true">
+                      <div class="itim">
+                          <i class="fas fa-newspaper fs-1"></i>
+                          <h5 class="">Blog</h5>
+                      </div>
+                  </button>
+              </li>
+      
+              <li class="nav-item" role="presentation">
+                  <button class="btn boton" id="pill4" data-bs-toggle="pill" data-bs-target="#contacto" type="button" role="tab" aria-controls="contacto" aria-selected="true">
+                      <div class="itim">
+                          <i class="fas fa-envelope-open-text fs-1 "></i>
+                          <h5 class="">Contacto</h5>
+                      </div>
+                  </button>
+              </li>
+            </ul>
+      
+          </div>
+      
+        <br>
+        <br>
+      
+          <div class="container w-75">
+              <div class="tab-content" id="pills-tabContent">
+      
+                  <div class="tab-pane fade fondo-verde p-3" id="sobremi" role="tabpanel" aria-labelledby="sobremi">
+                      
+                      <div class="text-center">
+                          <h2 class="itim marron">Sobre Mí</h2>
                 
-
-            </div>
-
-        </div>
-
-    
-    </div>
-   
-
-    <div class="container-fluid" id="contenido">
-
-        <div id="sobremi" class="container w-75 p-5 my-1 toggle fondo-verde">
-
-            <div class="text-center">
-                <h3 class="itim marron">Sobre Mí</h3>
-
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati delectus, dolorum tempora est necessitatibus veritatis ea sapiente ratione saepe sit modi quas. Totam, repellat maxime? Autem eum eveniet ex tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas blanditiis tempora mollitia deleniti commodi doloribus dolorem necessitatibus corporis amet, est enim vero a! Officiis similique, error esse recusandae iure fugit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed tempora similique iste molestiae quam dolore excepturi nam? Doloribus, dolore saepe obcaecati quaerat officiis at quisquam, soluta unde facere consequuntur odio.</p>
-
-                <div class="d-flex align-items-center">
-                    <img src="https://picsum.photos/250" class="img-fluid" style="border-radius: 20px;" alt="">
-                    <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ab asperiores excepturi explicabo atque similique facere officia quos cum facilis odit, obcaecati, fugit rerum perferendis ducimus voluptates. Delectus, doloremque reprehenderit?</p>
-                </div>
-
-                <br>
-
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam inventore voluptates ut asperiores ullam quia. Cumque modi aliquid quidem, similique nam officia esse recusandae laborum, enim nisi incidunt, at ullam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum ipsam at magnam impedit quaerat debitis eveniet, non aliquid error, distinctio vero ut perspiciatis tempore placeat numquam fuga recusandae adipisci.</p>
                 
-            </div>
-
-        </div>
-
-        <div id="profesion" class="container w-75 p-5 my-1 toggle fondo-verde" >
-
-            <div class="text-center">
-                <h3 class="itim marron">Mi Profesión</h3>
-
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati delectus, dolorum tempora est necessitatibus veritatis ea sapiente ratione saepe sit modi quas. Totam, repellat maxime? Autem eum eveniet ex tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas blanditiis tempora mollitia deleniti commodi doloribus dolorem necessitatibus corporis amet, est enim vero a! Officiis similique, error esse recusandae iure fugit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed tempora similique iste molestiae quam dolore excepturi nam? Doloribus, dolore saepe obcaecati quaerat officiis at quisquam, soluta unde facere consequuntur odio.</p>
-
-                <div class="d-flex align-items-center">
-                    <img src="https://picsum.photos/250" class="img-fluid" style="border-radius: 20px;" alt="">
-                    <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ab asperiores excepturi explicabo atque similique facere officia quos cum facilis odit, obcaecati, fugit rerum perferendis ducimus voluptates. Delectus, doloremque reprehenderit?</p>
-                </div>
-
-                <br>
-
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam inventore voluptates ut asperiores ullam quia. Cumque modi aliquid quidem, similique nam officia esse recusandae laborum, enim nisi incidunt, at ullam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum ipsam at magnam impedit quaerat debitis eveniet, non aliquid error, distinctio vero ut perspiciatis tempore placeat numquam fuga recusandae adipisci.</p>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati delectus, dolorum tempora est necessitatibus veritatis ea sapiente ratione saepe sit modi quas. Totam, repellat maxime? Autem eum eveniet ex tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas blanditiis tempora mollitia deleniti commodi doloribus dolorem necessitatibus corporis amet, est enim vero a! Officiis similique, error esse recusandae iure fugit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed tempora similique iste molestiae quam dolore excepturi nam? Doloribus, dolore saepe obcaecati quaerat officiis at quisquam, soluta unde facere consequuntur odio.</p>
                 
-            </div>
-
-        </div>
-
-        <div id="blog" class="container w-75 p-5 my-1 toggle fondo-verde">
-
-            <div class="text-center">
-                <h3 class="itim marron">Blog</h3>
-
-
-                <p>Noticias y Novedades</p>
-
-                <div class="d-flex align-items-center fondo-rosa">
-
-                    <div style="min-width: 300px; max-width: 300px;">
-                        <img src="https://picsum.photos/500" alt="" class="img-fluid" style="border-radius: 100px;">
-                    </div>
-
-                    <div class="text-start p-3">
-                        <h4>Este es el Título de la noticia</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rem porro repellendus debitis eligendi deserunt quaerat explicabo, magnam aliquid commodi suscipit ratione quibusdam accusamus possimus esse, asperiores consectetur earum ad?</p>
-                        <small>31/02/2022</small>
-                    </div>
-                </div>
+                          <div class="d-flex align-items-center">
+                              <img src="https://picsum.photos/250" class="img-fluid" style="border-radius: 20px;" alt="">
+                              <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ab asperiores excepturi explicabo atque similique facere officia quos cum facilis odit, obcaecati, fugit rerum perferendis ducimus voluptates. Delectus, doloremque reprehenderit?</p>
+                          </div>
                 
-
-               
-            </div>
-
-        </div>
-
-        <div id="contacto" class="container w-75 p-5 my-1 toggle fondo-verde">
-
-            <div class="text-center">
-                <h3 class="itim marron">Contacto</h3>
-
-
-                <p>Podes encontrarme en:</p>
-
-                <h5 class="itim">
-                    <a href="www.cemis.com.ar" target="_blank" class="text-decoration-none">
-                        <i class="fas fas fa-map-marker-alt"></i> Cemis - Viedma, Río Negro
-                    </a>
-                </h5>
-
-                <h5  class="itim ">
-                    <a href="https://genesisviedma.com.ar/" target="_blank" class="text-decoration-none">
-                        <i class="fas fas fa-map-marker-alt"></i> Centro Médico Genesis - Viedma, Río Negro
-                    </a>
-                </h5>
-                <br>
-
-                <p>ó podes consultar al mail:</p>
-
-                <h5 class="itim">
-
-                    <a href="mailto:dra.mondillo@gmail.com?subject=Consulta Web" class="text-decoration-none">
-                        <i class="fas fa-envelope"></i> dra.mondillo@gmail.com
-
-                </h5>
+                          <br>
                 
-
-               
-            </div>
-
-        </div>
-
-    </div>
-
-
-
+                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam inventore voluptates ut asperiores ullam quia. Cumque modi aliquid quidem, similique nam officia esse recusandae laborum, enim nisi incidunt, at ullam!</p>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum ipsam at magnam impedit quaerat debitis eveniet, non aliquid error, distinctio vero ut perspiciatis tempore placeat numquam fuga recusandae adipisci.</p>
+                          
+                      </div>
+                  
+                  </div>
+      
+                  <div class="tab-pane fade fondo-verde p-3" id="profesion" role="tabpanel" aria-labelledby="pills-profile-tab">
+                      <div class="text-center">
+                          <h3 class="itim marron">Mi Profesión</h3>
+                
+                
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati delectus, dolorum tempora est necessitatibus veritatis ea sapiente ratione saepe sit modi quas. Totam, repellat maxime? Autem eum eveniet ex tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas blanditiis tempora mollitia deleniti commodi doloribus dolorem necessitatibus corporis amet, est enim vero a! Officiis similique, error esse recusandae iure fugit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed tempora similique iste molestiae quam dolore excepturi nam? Doloribus, dolore saepe obcaecati quaerat officiis at quisquam, soluta unde facere consequuntur odio.</p>
+                
+                          <div class="d-flex align-items-center">
+                              <img src="https://picsum.photos/250" class="img-fluid" style="border-radius: 20px;" alt="">
+                              <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ab asperiores excepturi explicabo atque similique facere officia quos cum facilis odit, obcaecati, fugit rerum perferendis ducimus voluptates. Delectus, doloremque reprehenderit?</p>
+                          </div>
+                
+                          <br>
+                
+                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam inventore voluptates ut asperiores ullam quia. Cumque modi aliquid quidem, similique nam officia esse recusandae laborum, enim nisi incidunt, at ullam!</p>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum ipsam at magnam impedit quaerat debitis eveniet, non aliquid error, distinctio vero ut perspiciatis tempore placeat numquam fuga recusandae adipisci.</p>
+                          
+                      </div>
+                  </div>
+      
+                  <div class="tab-pane fade fondo-verde p-3" id="blog" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      
+                      <div class="text-center">
+                          <h3 class="itim marron">Blog</h3>
+                
+                
+                          <p>Noticias y Novedades</p>
+                
+                          <div class="d-flex align-items-center fondo-rosa">
+                
+                              <div style="min-width: 300px; max-width: 300px;">
+                                  <img src="https://picsum.photos/500" alt="" class="img-fluid" style="border-radius: 100px;">
+                              </div>
+                
+                              <div class="text-start p-3">
+                                  <h4>Este es el Título de la noticia</h4>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rem porro repellendus debitis eligendi deserunt quaerat explicabo, magnam aliquid commodi suscipit ratione quibusdam accusamus possimus esse, asperiores consectetur earum ad?</p>
+                                  <small>31/02/2022</small>
+                              </div>
+                          </div>
+                          
+                
+                         
+                      </div>
+      
+                  </div>
+      
+                  <div class="tab-pane fade fondo-verde p-3" id="contacto" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <div class="text-center">
+                          <h3 class="itim marron">Contacto</h3>
+                
+                
+                          <p>Podes encontrarme en:</p>
+                
+                          <h5 class="itim">
+                              <a href="www.cemis.com.ar" target="_blank" class="text-decoration-none">
+                                  <i class="fas fas fa-map-marker-alt"></i> Cemis - Viedma, Río Negro
+                              </a>
+                          </h5>
+                
+                          <h5  class="itim ">
+                              <a href="https://genesisviedma.com.ar/" target="_blank" class="text-decoration-none">
+                                  <i class="fas fas fa-map-marker-alt"></i> Centro Médico Genesis - Viedma, Río Negro
+                              </a>
+                          </h5>
+                          <br>
+                
+                          <p>ó podes consultar al mail:</p>
+                
+                          <h5 class="itim">
+                
+                              <a href="mailto:dra.mondillo@gmail.com?subject=Consulta Web" class="text-decoration-none">
+                                  <i class="fas fa-envelope"></i> dra.mondillo@gmail.com
+                
+                              </a>
+                          </h5>
+                          
+                
+                         
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+        <!--
+      
+      
         
-
-    
-
-    <script>
-
+      
+        <div id="contacto" class="container w-75 p-5 my-1 toggle fondo-verde">
+      
+           
+      
+        </div>-->
+      
+      </div>
+      
+      
+      
+        
+      
+      
+      
+      <!--<script>
+      
         $(document).ready(function(){
-
+      
             $('#sobremi').hide();
             $('#profesion').hide();
             $('#contacto').hide();
             $('#blog').hide();
-
+      
         });
-
+      
         function toggleDiv(divId) {
             $("#"+divId).toggle();
             $('.toggle').not($("#"+divId)).hide();
         }
-    </script>
-
-    <!--SCROLLS-->
-    <!--###################################################-->
-    <script type="text/javascript">
+      </script>-->
+      
+      <!--SCROLLS-->
+      <!--###################################################-->
+      <script type="text/javascript">
         
         $("#goto1").click(function() {
             $('html, body').animate({
             scrollTop: $("#sobremi").offset().top
-            }, 500, "swing");
+            }, 500);
         });
-
+      
         $("#goto2").click(function() {
             $([document.documentElement, document.body]).animate({
             scrollTop: $("#profesion").offset().top
             }, 500);
         });
-
+      
         $("#goto3").click(function() {
             $([document.documentElement, document.body]).animate({
             scrollTop: $("#contacto").offset().top
             }, 500);
         });
-
+      
         $("#goto4").click(function() {
             $([document.documentElement, document.body]).animate({
             scrollTop: $("#blog").offset().top
             }, 500);
         });
-    </script>
+      </script>
 
 </body>
 </html>
