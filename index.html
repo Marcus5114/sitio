@@ -1,299 +1,241 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Anahí Mondillo</title>
-
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"> 
-        
-
-        <script src="https://kit.fontawesome.com/dcab6efb5d.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NTICX - NEA</title>
+    <script src="https://kit.fontawesome.com/dcab6efb5d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <style>
-        @font-face {
-            font-family: Wishper;
-            src: url(./Imágenes/Wishper.ttf);
+
+        /*HOVER CARDS*/
+        .card-pres {
+            transition: .5s ease;
         }
 
-        p, small{
-            color: #77655B;
-            font-family: 'Itim', cursive;
+        .card-pres:hover {
+            box-shadow: 0px 10px 30px 2px rgba(0,0,0,0.15);        
+            transition: .35s ease;
+        }
+        /*############*/
+
+        /*HOVER BOTONES*/
+        .btn.btn-card {
+        z-index: 1;
+        position: relative;
+        font-size: inherit;
+        font-family: inherit;
+        border: 1px solid black;
+        padding: 0.5em 1em;
+        outline: none;
+        
+        background-color: white;
+        overflow: hidden;
+        transition: color 0.4s ease-in-out;
         }
 
-        a{
-            color: #DC5849;
-            transition: 0.25s ease;
+        .btn.btn-card::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: #3cefff;
+        transform-origin: center;
+        transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+        transition: transform 0.45s ease-in-out;
         }
 
-        a:hover {
-            color: #F4964D;
-            transition: 0.25s ease;
+        .btn.btn-card:hover {
+        cursor: pointer;
+        color: #161616;
         }
 
-        .wishper {
-            font-family: Wishper;
+        .btn.btn-card:hover::before {
+        transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+        }
+        /*###############*/
+
+        /*HOVER LISTADO PROPIEDADES*/
+        .listado-prop {
+        z-index: 1;
+        position: relative;
+        font-size: inherit;
+        font-family: inherit;
+        
+        padding: 0.5em 1em;
+        outline: none;
+        border: none;
+        background-color: white;
         }
 
-        .itim {
-            font-family: 'Itim', cursive;
+        .listado-prop::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fc2f70;
+        transform-origin: center right;
+        transform: scaleX(0);
+        transition: transform 0.5s ease-in-out;
         }
 
-        .celeste{
-            color: #50b4d8;
+        .listado-prop:hover {
+        cursor: pointer;
         }
 
-        .fondo-verde{
-            background-color: rgba(166, 217, 169, 0.5);
-            border-radius: 8rem;
+        .listado-prop:hover::before {
+        transform-origin: center left;
+        transform: scaleX(1);
         }
-
-        .fondo-rosa{
-            background-color: rgba(255, 218, 209, 0.5);
-            border-radius: 200px;
-        }
-
-        .marron{
-            color: #77655B;
-        }
-
-        .nombre {
-            color: #5bcefa;
-            text-shadow: -3px 1px 1px rgba(91, 206, 250, 0.48);
-        }
-
-        .boton {
-            color: #77655B;
-            transition: 0.35s ease;
-        }
-
-        .boton:hover{
-            color: #DC5849;
-            transition: 0.35s ease;
-        }
-
-        .btn-redes{
-            color: #DC5849;
-            transition: .25s ease;
-        }
-
-        .btn-redes:hover{
-            color: #F4964D;
-            transition: .25s ease;
-        }
-
-
-
+        /*##################*/
 
     </style>
-</head>
-<body>
-    <div class="container-fluid p-3" style="height: 100vh;">
+  </head>
+  <body>
+    
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
 
 
-        <div class="container w-75 fondo-rosa">
-            
-            <div class="d-flex justify-content-center p-3">
-      
-                <div class="p-2">
-                    <img src="./Imágenes/anahi.jpg" alt="" class="img-fluid" style="border-radius: 2rem;">
+                <div class="border border-primary-subtle border-3 rounded p-5 text-center">
+
+                    <h1>NEA NTICX 2023</h1>
+                    <h3 class="text-muted">
+                        Bienvenidos al espacio NTICX donde se muestran los trabajos realizados por el alumnado
+                    </h3>
+
                 </div>
-      
-                <div class="p-2">
-      
-                    <h1 class="wishper nombre display-2"> Dra. Anahí <br> Mondillo</h1>
-                    <h2 class="wishper celeste">Endocrinóloga</h2>
-                    <h5 class="itim marron">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                    <div class="btn-group">
-                        <a href="https://www.instagram.com/dra.mondillo/" target="_blank" class="btn btn-redes"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/channel/UCw7WzcLuKaNJLxWGJppKbXg?app=desktop" target="_blank" class="btn btn-redes"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.tiktok.com/@dra.mondillo" target="_blank" class="btn btn-redes"><i class="fab fa-tiktok"></i></a>
+                <br><br>
+
+                <h5>
+                    Nuevas Tecnologías y Comunicación
+                </h5>
+                <p>
+                    Presentaciones que abarcan temas como Inteligencia Artificial, Ciberseguridad, Domótica y más a través de casos de estudio reales
+                </p>
+                <hr>
+
+                <div class="row row-cols-2 row-cols-md-3 justify-content-center g-3">
+
+                    <div class="col">
+
+                        <div class="card card-pres border-0 rounded-5 ">
+                            <div class="card-body">
+                              <h3 class=" display-1 text-center p-3"><i class="fas fa-brain"></i></h3>
+                              <h5 class="text-center">Inteligencia Artificial</h5><br>
+                              <a href="#" class="btn btn-card w-100 rounded-5"><i class="fas fa-eye"></i></a>
+                            </div>
+                          </div>
+
                     </div>
-      
-      
+
+                    <div class="col">
+
+                        <div class="card card-pres border-0 rounded-5">
+                            <div class="card-body">
+                              <h3 class=" display-1 text-center p-3"><i class="fas fa-city"></i></h3>
+                              <h5 class="text-center">Domótica y Ciudades Inteligentes</h5><br>
+                              <a href="#" class="btn btn-card w-100 rounded-5"><i class="fas fa-eye"></i></a>
+                            </div>
+                          </div>
+
+                    </div>
+
+                    <div class="col">
+
+                        <div class="card card-pres border-0 rounded-5">
+                            <div class="card-body">
+                              <h3 class=" display-1 text-center p-3"><i class="fas fa-robot"></i></h3>
+                              <h5 class="text-center">Automatización del Trabajo</h5><br>
+                              <a href="#" class="btn btn-card w-100 rounded-5"><i class="fas fa-eye"></i></a>
+                            </div>
+                          </div>
+
+                    </div>
+
+                    <div class="col">
+
+                        <div class="card card-pres border-0 rounded-5">
+                            <div class="card-body">
+                              <h3 class=" display-1 text-center p-3"><i class="fas fa-user-secret"></i></h3>
+                              <h5 class="text-center">Ciberseguridad y Privacidad</h5><br>
+                              <a href="#" class="btn btn-card w-100 rounded-5"><i class="fas fa-eye"></i></a>
+                            </div>
+                          </div>
+
+                    </div>
+
+                    <div class="col">
+
+                        <div class="card card-pres border-0 rounded-5">
+                            <div class="card-body">
+                              <h3 class=" display-1 text-center p-3"><i class="fab fa-bitcoin"></i></h3>
+                              <h5 class="text-center">Criptomonedas y Blockchain</h5><br>
+                              <a href="#" class="btn btn-card w-100 rounded-5"><i class="fas fa-eye"></i></a>
+                            </div>
+                          </div>
+
+                    </div>
+
+                    <div class="col">
+
+                        <div class="card card-pres border-0 rounded-5">
+                            <div class="card-body">
+                              <h3 class=" display-1 text-center p-3"><i class="fas fa-tower-cell"></i></h3>
+                              <h5 class="text-center">Conectividad 5G</h5><br>
+                              <a href="#" class="btn btn-card w-100 rounded-5"><i class="fas fa-eye"></i></a>
+                            </div>
+                          </div>
+
+                    </div>
+
                 </div>
-      
+                <hr>
+
+                <br>
+
+                <h5>
+                    Programación y Diseño Web
+                </h5>
+                <p>
+                    Selección de trabajos de programación y diseño web de un sitio inmobiliario ficticio. El contenido es único, dejando como prioridad la estética y funcionamiento
+                </p>
+                <hr>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item listado-prop fs-3">Inmobiliaria Delemastro <i class="fas fa-home ms-auto"></i> </li>
+                    <li class="list-group-item listado-prop fs-3">Vilustein Propiedades <i class="fas fa-building"></i></li>
+                    <li class="list-group-item listado-prop fs-3">Nuevos Barrios <i class="fas fa-umbrella-beach"></i></li>
+                </ul>
+
             </div>
-      
+            <div class="col-md-1"></div>
+
         </div>
-      
-        <br>
-      
-        <div class="container w-75 p-3 fondo-verde">
-      
-          <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
-              
-              <li class="nav-item" role="presentation">
-                    <button class="btn boton" id="pill1" data-bs-toggle="pill" data-bs-target="#sobremi" type="button" role="tab" aria-controls="sobremi" aria-selected="true">
-                        <div class="itim">
-                            <i class="fas fa-user fs-1"></i>
-                            <h5 class="">Sobre Mí</h5>
-                        </div>
-                    </button>
-                
 
-              </li>
-      
-      
-              <li class="nav-item" role="presentation">
-                  <button class="btn boton" id="pill2" data-bs-toggle="pill" data-bs-target="#profesion" type="button" role="tab" aria-controls="profesion" aria-selected="true">
-                      <div class="itim">
-                          <i class="fas fa-hand-holding-medical fs-1 "></i>
-                          <h5 class="">Mi Profesión</h5>
-                      </div>
-                  </button>
-              </li>
-      
-              <li class="nav-item" role="presentation">
-                  <button class="btn boton" id="pill2" data-bs-toggle="pill" data-bs-target="#blog" type="button" role="tab" aria-controls="blog" aria-selected="true">
-                      <div class="itim">
-                          <i class="fas fa-newspaper fs-1"></i>
-                          <h5 class="">Blog</h5>
-                      </div>
-                  </button>
-              </li>
-      
-              <li class="nav-item" role="presentation">
-                  <button class="btn boton" id="pill4" data-bs-toggle="pill" data-bs-target="#contacto" type="button" role="tab" aria-controls="contacto" aria-selected="true">
-                      <div class="itim">
-                          <i class="fas fa-envelope-open-text fs-1 "></i>
-                          <h5 class="">Contacto</h5>
-                      </div>
-                  </button>
-              </li>
-            </ul>
-      
-          </div>
-      
-        <br>
-        <br>
-      
-          <div class="container w-75">
-              <div class="tab-content" id="pills-tabContent">
-      
-                  <div class="tab-pane fade fondo-verde p-3" id="sobremi" role="tabpanel" aria-labelledby="sobremi">
-                      
-                      <div class="text-center">
-                          <h2 class="itim marron">Sobre Mí</h2>
-                
-                
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati delectus, dolorum tempora est necessitatibus veritatis ea sapiente ratione saepe sit modi quas. Totam, repellat maxime? Autem eum eveniet ex tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas blanditiis tempora mollitia deleniti commodi doloribus dolorem necessitatibus corporis amet, est enim vero a! Officiis similique, error esse recusandae iure fugit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed tempora similique iste molestiae quam dolore excepturi nam? Doloribus, dolore saepe obcaecati quaerat officiis at quisquam, soluta unde facere consequuntur odio.</p>
-                
-                          <div class="d-flex align-items-center">
-                              <img src="https://picsum.photos/250" class="img-fluid" style="border-radius: 20px;" alt="">
-                              <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ab asperiores excepturi explicabo atque similique facere officia quos cum facilis odit, obcaecati, fugit rerum perferendis ducimus voluptates. Delectus, doloremque reprehenderit?</p>
-                          </div>
-                
-                          <br>
-                
-                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam inventore voluptates ut asperiores ullam quia. Cumque modi aliquid quidem, similique nam officia esse recusandae laborum, enim nisi incidunt, at ullam!</p>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum ipsam at magnam impedit quaerat debitis eveniet, non aliquid error, distinctio vero ut perspiciatis tempore placeat numquam fuga recusandae adipisci.</p>
-                          
-                      </div>
-                  
-                  </div>
-      
-                  <div class="tab-pane fade fondo-verde p-3" id="profesion" role="tabpanel" aria-labelledby="pills-profile-tab">
-                      <div class="text-center">
-                          <h3 class="itim marron">Mi Profesión</h3>
-                
-                
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati delectus, dolorum tempora est necessitatibus veritatis ea sapiente ratione saepe sit modi quas. Totam, repellat maxime? Autem eum eveniet ex tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas blanditiis tempora mollitia deleniti commodi doloribus dolorem necessitatibus corporis amet, est enim vero a! Officiis similique, error esse recusandae iure fugit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed tempora similique iste molestiae quam dolore excepturi nam? Doloribus, dolore saepe obcaecati quaerat officiis at quisquam, soluta unde facere consequuntur odio.</p>
-                
-                          <div class="d-flex align-items-center">
-                              <img src="https://picsum.photos/250" class="img-fluid" style="border-radius: 20px;" alt="">
-                              <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ab asperiores excepturi explicabo atque similique facere officia quos cum facilis odit, obcaecati, fugit rerum perferendis ducimus voluptates. Delectus, doloremque reprehenderit?</p>
-                          </div>
-                
-                          <br>
-                
-                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam inventore voluptates ut asperiores ullam quia. Cumque modi aliquid quidem, similique nam officia esse recusandae laborum, enim nisi incidunt, at ullam!</p>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum ipsam at magnam impedit quaerat debitis eveniet, non aliquid error, distinctio vero ut perspiciatis tempore placeat numquam fuga recusandae adipisci.</p>
-                          
-                      </div>
-                  </div>
-      
-                  <div class="tab-pane fade fondo-verde p-3" id="blog" role="tabpanel" aria-labelledby="pills-contact-tab">
-                      
-                      <div class="text-center">
-                          <h3 class="itim marron">Blog</h3>
-                
-                
-                          <p>Noticias y Novedades</p>
-                
-                          <div class="d-flex align-items-center fondo-rosa">
-                
-                              <div style="min-width: 300px; max-width: 300px;">
-                                  <img src="https://picsum.photos/500" alt="" class="img-fluid" style="border-radius: 100px;">
-                              </div>
-                
-                              <div class="text-start p-3">
-                                  <h4>Este es el Título de la noticia</h4>
-                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rem porro repellendus debitis eligendi deserunt quaerat explicabo, magnam aliquid commodi suscipit ratione quibusdam accusamus possimus esse, asperiores consectetur earum ad?</p>
-                                  <small>31/02/2022</small>
-                              </div>
-                          </div>
-                          
-                
-                         
-                      </div>
-      
-                  </div>
-      
-                  <div class="tab-pane fade fondo-verde p-3" id="contacto" role="tabpanel" aria-labelledby="pills-contact-tab">
-                      <div class="text-center">
-                          <h3 class="itim marron">Contacto</h3>
-                
-                
-                          <p>Podes encontrarme en:</p>
-                
-                          <h5 class="itim">
-                              <a href="www.cemis.com.ar" target="_blank" class="text-decoration-none">
-                                  <i class="fas fas fa-map-marker-alt"></i> Cemis - Viedma, Río Negro
-                              </a>
-                          </h5>
-                
-                          <h5  class="itim ">
-                              <a href="https://genesisviedma.com.ar/" target="_blank" class="text-decoration-none">
-                                  <i class="fas fas fa-map-marker-alt"></i> Centro Médico Genesis - Viedma, Río Negro
-                              </a>
-                          </h5>
-                          <br>
-                
-                          <p>ó podes consultar al mail:</p>
-                
-                          <h5 class="itim">
-                
-                              <a href="mailto:dra.mondillo@gmail.com?subject=Consulta Web" class="text-decoration-none">
-                                  <i class="fas fa-envelope"></i> dra.mondillo@gmail.com
-                
-                              </a>
-                          </h5>
-                          
-                
-                         
-                      </div>
-                  </div>
-              </div>
-          </div>
-      
 
-      </div>
-      
-      
-      
+    </div>
+    <br>
+
+    <div class="bg-secondary-subtle text-center" style="bottom: 0;">
+
+        <p class="m-0">Sitio desarrollado por el equipo de NTICX de NEA - 2023  
         
-      
-</body>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
 </html>
